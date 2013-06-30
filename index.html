@@ -25,7 +25,7 @@
                       </tr>
                       {{#each file in model}}
                       <tr><td>
-                          {{#linkTo 'file'}}
+                          {{#linkTo 'file' file}}
                             {{file.title}} by {{file.author}}
                           {{/linkTo}}
                       </td></tr>
