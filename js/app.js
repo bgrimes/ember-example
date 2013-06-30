@@ -16,3 +16,8 @@ App.FileRoute = Ember.Route.extend({
         return FILES[params.file_id];
     }
 });
+
+Ember.Handlebars.helper('markdown', function(value){
+   var converter = new Showdown.converter();
+    return converter.makeHtml(value);
+});
