@@ -10,3 +10,9 @@ App.FilesRoute = Ember.Route.extend({
     return FILES;
   }
 });
+
+App.FileRoute = Ember.Route.extend({
+    model: function(params){
+        return FILES[params.file_id];
+    }
+});
