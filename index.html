@@ -16,7 +16,22 @@
   </script>
 
   <script type="text/x-handlebars" id="files">
-  files
+      <div class="container-fluid">
+          <div class="row-fluid">
+              <div class="span3">
+                  <table class="table">
+                      <tr>
+                          <td>Files</td>
+                      </tr>
+                      {{#each file in model}}
+                      <tr><td>
+                          {{file.title}} by {{file.author}}
+                      </td></tr>
+                      {{/each}}
+                  </table>
+              </div>
+          </div>
+      </div>
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
