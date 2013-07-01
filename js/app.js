@@ -17,6 +17,16 @@ App.FileRoute = Ember.Route.extend({
     }
 });
 
+App.FileController = Ember.ObjectController.extend({
+    done: function(){
+        this.set('isEditing', false);
+    },
+    
+    edit: function(){
+        this.set('isEditing', true);
+    }
+});
+
 Ember.Handlebars.helper('markdown', function(value){
    var converter = new Showdown.converter();
     return new Handlebars.SafeString(converter.makeHtml(value));

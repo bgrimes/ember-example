@@ -37,6 +37,12 @@
   </script>
 
   <script type="text/x-handlebars" id="file">
+      {{#if isEditing}}
+        <button class="btn" {{action 'done'}}>Done</button>
+      {{else}}
+        <button class="btn" {{action 'edit'}}>Edit</button>
+      {{/if}}
+      
       <h2>{{title}}</h2>
       <h3>by {{author}}</h3>
       
