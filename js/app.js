@@ -19,5 +19,5 @@ App.FileRoute = Ember.Route.extend({
 
 Ember.Handlebars.helper('markdown', function(value){
    var converter = new Showdown.converter();
-    return converter.makeHtml(value);
+    return new Handlebars.SafeString(converter.makeHtml(value));
 });
